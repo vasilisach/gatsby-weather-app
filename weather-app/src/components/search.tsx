@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import SearchIcon from './SearchIcon';
+import SearchIcon from './searchIcon';
 
 type Props = {
   handleSearch: (newCity: string) => void;
 }
 
-const SearchCity: React.FC<Props> = ({handleSearch}) => {
+const Search: React.FC<Props> = ({handleSearch}) => {
   const [value, setValue] = useState('');
 
   return (
@@ -27,4 +27,4 @@ const SearchCity: React.FC<Props> = ({handleSearch}) => {
   )
 }
 
-export default SearchCity;
+export default Search;

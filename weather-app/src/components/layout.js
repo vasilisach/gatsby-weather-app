@@ -9,15 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 import Header from "./header"
 import "./layout.css"
-
-const client = new ApolloClient({
-  uri: 'https://graphql-weather-api.herokuapp.com',
-  cache: new InMemoryCache()
-});
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -40,7 +34,6 @@ const Layout = ({ children }) => {
   const imageData = data.desktop.childImageSharp.fluid
 
   return (
-    <ApolloProvider client={client}>
       <BackgroundImage
       Tag="section"
       className='main-background'
@@ -51,7 +44,6 @@ const Layout = ({ children }) => {
             { children }  
         </main>
       </BackgroundImage>
-    </ApolloProvider>  
   )
 }
 

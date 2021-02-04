@@ -5,7 +5,7 @@ type Props = {
   city: string
 }
 
-const WeatherData: React.FC<Props> = ({ city }) => {
+const WeatherDataBlock: React.FC<Props> = ({ city }) => {
   const { data, error, loading } = useWeatherDataQuery({
     variables: {
       name: city
@@ -50,4 +50,4 @@ const WeatherData: React.FC<Props> = ({ city }) => {
   )
 }
 
-export default WeatherData;
+export default WeatherDataBlock;
