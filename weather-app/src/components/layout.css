@@ -3,7 +3,9 @@ html {
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
 }
 body {
   margin: 0;
@@ -81,8 +83,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -260,8 +261,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -277,8 +277,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -294,8 +293,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -311,8 +309,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -328,8 +325,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: georgia, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -590,8 +586,138 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+main{
+  height: 100vh;
+}
+header{
+  padding: 20px 30px;
+}
+footer{
+  position: absolute;
+  bottom: 86px;
+  background-color: rgba(169, 85, 253, 0.26);
+  color: white;
+  width: 100%;
+  text-align: right;
+  padding: 10px 30px;
+}
+.main-background{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-content{
+  padding: 30px;
+}
+a{
+  text-decoration: none;
+  color: rgb(109, 141, 168);
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
+}
+.search-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.search{
+  font-size: 18px;
+  padding: 10px;
+  width: 40%;
+  max-width: 400px;
+  border-radius: 10px 0 0 10px;
+}
+.search-btn{
+  background-color: white;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+.search, .search-btn{
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.loading, .search-error{
+  margin: 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.city-name, .current-date{
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  margin: 10px;
+}
+.current-date{
+  font-size: 14px;
+  margin: 0 10px;
+  font-weight: 200;
+}
+.weather-data_wrapper{
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px){
+  .weather-data_wrapper{
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.weather-data_main{
+  font-size: 150px;
+  color: white;
+  margin: auto;
+}
+.summary{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  text-decoration: overline underline;
+}
+@media screen and (min-width: 768px){
+  .weather-data_main{
+    font-size: 200px;
+  }
+}
+.weather-data_rest{
+  background-color: rgba(255,255,255,0.3);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+}
+@media screen and (min-width: 768px){
+  .weather-data_rest{
+    margin: 10px;
+    padding: 20px 5px;
+  }
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  color: white;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px){
+  .item{
+    padding: 10px 30px;
+  }
+}
+.item_type{
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
+  font-style: italic;
 }
