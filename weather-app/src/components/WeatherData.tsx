@@ -11,7 +11,6 @@ const WeatherData: React.FC<Props> = ({ city }) => {
       name: city
     }
   });
-    console.log(data)
   if (loading) {
     return <div className="loading">Loading data...</div>;
   }
