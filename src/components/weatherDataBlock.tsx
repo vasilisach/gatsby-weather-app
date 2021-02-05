@@ -1,5 +1,6 @@
 import React from 'react';
 import { useWeatherDataQuery } from '../../types';
+import { CircularProgress } from '@material-ui/core';
 
 type Props = {
   city: string
@@ -12,7 +13,7 @@ const WeatherDataBlock: React.FC<Props> = ({ city }) => {
     }
   });
   if (loading) {
-    return <div className="loading">Loading data...</div>;
+    return<div className="loading"><CircularProgress color="secondary" /></div>;
   }
 
   if (error || !data || !data.getCityByName) {

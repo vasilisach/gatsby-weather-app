@@ -665,6 +665,9 @@ a{
   margin: 0 10px;
   font-weight: 200;
 }
+.weather-data{
+  margin: auto;
+}
 .weather-data_wrapper{
   display: flex;
   flex-direction: column;

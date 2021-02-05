@@ -6,7 +6,7 @@ import WeatherDataBlock from "../components/weatherDataBlock"
 
 const IndexPage = () => {
   const [city, setCity] = useState('Uzhhorod');
-  const handleSearch = useCallback(newCity => {
+  const handleSearch: (newCity: string) => void = useCallback((newCity) => {
     setCity(newCity)
   }, [])
   return (
