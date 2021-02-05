@@ -13,7 +13,7 @@ const WeatherDataBlock: React.FC<Props> = ({ city }) => {
     }
   });
   if (loading) {
-    return<div className="loading"><CircularProgress color="secondary" /></div>;
+    return<div className="loading"><CircularProgress color="primary" /></div>;
   }
 
   if (error || !data || !data.getCityByName) {
