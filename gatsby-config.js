@@ -5,6 +5,12 @@ module.exports = {
     author: `Vasylyna Andriichak`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'https://graphql-weather-api.herokuapp.com'
+      }
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
