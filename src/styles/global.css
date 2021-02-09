@@ -110,7 +110,7 @@ a{
   font-weight: 200;
 }
 .weather-data{
-  margin: auto;
+  margin: 50px auto;
 }
 .weather-data_wrapper{
   display: flex;
@@ -181,4 +181,31 @@ a{
   margin-top: 10px;
   font-style: italic;
   
+}
+.search-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-input{
+  width: 300px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid lightgray
+}
+
+.autocomplete-list{
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  border: 1px solid lightgray
+}
+.autocomplete-block{
+  display: flex;
+  justify-content: center;
 }

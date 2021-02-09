@@ -1,6 +1,6 @@
-import { event, HTMLInputElement } from '@ungap/global-this';
 import React, { useState } from 'react';
 import SearchIcon from './searchIcon';
+import AutocompleteSearch from './autocompleteSearchGoogle';
 
 type Props = {
   handleSearch: (newCity: string) => void;
@@ -14,6 +14,7 @@ const Search: React.FC<Props> = ({handleSearch}) => {
     }
   }
   return (
+    <>
     <div className="search-wrapper">
       <input
         className="search"
@@ -30,6 +31,7 @@ const Search: React.FC<Props> = ({handleSearch}) => {
         <SearchIcon />
       </button>
     </div>
+    </>
   )
 }
 
