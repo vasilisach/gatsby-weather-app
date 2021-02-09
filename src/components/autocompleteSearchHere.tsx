@@ -8,7 +8,6 @@ const AutocompleteCity = ({handleSearch})=>{
     const [{ data, loading, error }, fetchSuggestions] = useAutocomplete();
     const [location, setLocation]=useState<string>('');
     const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
-    console.log(data)
     const handleKeyDown = (event, value)=>{
         if(event.key === 'Enter'){
             handleSearch(value);
@@ -35,8 +34,6 @@ const AutocompleteCity = ({handleSearch})=>{
                 onKeyUp = {e=>handleKeyDown(e, location)}
             />
           </div>
-          {loading && !error && <p>Loading data...</p>}
-          {error && <p>{error.message}</p>}
           {data && isMenuOpen && !loading &&  (
               <div className="autocomplete-block">
                   <ul className="autocomplete-list">
